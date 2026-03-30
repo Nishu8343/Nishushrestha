@@ -1,0 +1,1101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nishu Shrestha — CS Student, Developer & Founder · ULM · Cornell Tech"
+    />
+    <title>Nishu Shrestha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Cursor -->
+    <div id="cursor" aria-hidden="true"></div>
+    <div id="cursor-dot" aria-hidden="true"></div>
+
+    <!-- Progress -->
+    <div id="progress" role="progressbar" aria-label="Reading progress"></div>
+
+    <!-- Particles -->
+    <canvas id="particles" aria-hidden="true"></canvas>
+
+    <!-- Toast -->
+    <div id="toast" role="status" aria-live="polite">
+      <svg
+        width="15"
+        height="15"
+        fill="none"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5 13l4 4L19 7"
+        />
+      </svg>
+      Copied to clipboard!
+    </div>
+
+    <!-- ════════════ NAV ════════════ -->
+    <nav id="nav" role="navigation" aria-label="Main navigation">
+      <span class="nav-brand">NS</span>
+      <a href="#about" class="nav-a">About</a>
+      <a href="#experience" class="nav-a">Experience</a>
+      <a href="#projects" class="nav-a">Projects</a>
+      <a href="#awards" class="nav-a">Awards</a>
+      <a href="#contact" class="nav-a">Contact</a>
+    </nav>
+
+    <!-- ════════════ HERO ════════════ -->
+    <section id="hero" aria-label="Introduction">
+      <div class="blob blob-purple blob-1" aria-hidden="true"></div>
+      <div class="blob blob-cyan blob-2" aria-hidden="true"></div>
+
+      <div>
+        <p class="hero-label">CS · ULM · Cornell Tech · Monroe, LA</p>
+
+        <h1 class="hero-name">
+          <span class="first">
+            <span class="gname" data-text="NISHU">NISHU</span>
+          </span>
+          <span class="last">
+            <span class="gname" data-text="SHRESTHA">SHRESTHA</span>
+          </span>
+        </h1>
+
+        <p class="hero-role">
+          I build things as a&nbsp;<span class="tw-wrap"
+            ><span id="tw"></span
+            ><span class="tw-cursor" aria-hidden="true"></span
+          ></span>
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#projects" class="btn-fill">
+            <svg
+              width="15"
+              height="15"
+              fill="none"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13 7l5 5-5 5M6 7l5 5-5 5"
+              />
+            </svg>
+            See My Work
+          </a>
+          <a href="#" class="btn-outline" aria-label="Download Resume">
+            <svg
+              width="15"
+              height="15"
+              fill="none"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 15V3m0 12l-4-4m4 4l4-4M3 21h18"
+              />
+            </svg>
+            Download Resume
+          </a>
+        </div>
+
+        <div class="hero-badge" role="status">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          Open to Opportunities ✦
+        </div>
+      </div>
+
+      <div class="hero-photo-wrap reveal">
+        <img src="profile.JPG" alt="Nishu Shrestha" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- ════════════ MARQUEE ════════════ -->
+    <div class="marquee-bar" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="mq-item">Python</span><span class="mq-item">React</span
+        ><span class="mq-item">TypeScript</span
+        ><span class="mq-item">FastAPI</span><span class="mq-item">Next.js</span
+        ><span class="mq-item">Docker</span
+        ><span class="mq-item">PostgreSQL</span
+        ><span class="mq-item">PyTorch</span><span class="mq-item">Azure</span
+        ><span class="mq-item">Node.js</span><span class="mq-item">Figma</span
+        ><span class="mq-item">Machine Learning</span
+        ><span class="mq-item">Full Stack</span
+        ><span class="mq-item">AI Engineering</span
+        ><span class="mq-item">Cybersecurity</span
+        ><span class="mq-item">Python</span><span class="mq-item">React</span
+        ><span class="mq-item">TypeScript</span
+        ><span class="mq-item">FastAPI</span><span class="mq-item">Next.js</span
+        ><span class="mq-item">Docker</span
+        ><span class="mq-item">PostgreSQL</span
+        ><span class="mq-item">PyTorch</span><span class="mq-item">Azure</span
+        ><span class="mq-item">Node.js</span><span class="mq-item">Figma</span
+        ><span class="mq-item">Machine Learning</span
+        ><span class="mq-item">Full Stack</span
+        ><span class="mq-item">AI Engineering</span
+        ><span class="mq-item">Cybersecurity</span>
+      </div>
+    </div>
+
+    <!-- ════════════ ABOUT ════════════ -->
+    <section id="about" class="sec-pad" aria-labelledby="about-h">
+      <!-- All text content -->
+      <div class="about-content">
+        <span class="eyebrow">01 · About</span>
+        <h2 class="sec-title" id="about-h">The <em>Story</em></h2>
+
+        <p class="about-bio">
+          I'm a <strong>Computer Science (Honors) student</strong> with a 3.80
+          GPA and a minor in Mathematics — driven by a passion for building
+          software that creates real impact. From founding one of ULM's most
+          active tech communities to shipping full-stack production apps, I
+          thrive at the intersection of
+          <strong>AI, engineering, and human connection</strong>.
+        </p>
+        <p class="about-bio">
+          Passionate about cybersecurity, machine learning, and tools that
+          empower communities. Currently seeking opportunities where I can
+          contribute, learn, and lead.
+        </p>
+
+        <!-- Universities -->
+        <div class="uni-stack">
+          <div class="uni-card primary">
+            <span class="uni-icon">🎓</span>
+            <div>
+              <div class="uni-name">University of Louisiana Monroe</div>
+              <div class="uni-sub">
+                B.S. Computer Science (Honors) · Minor in Math · GPA 3.80
+              </div>
+            </div>
+            <span class="uni-badge">May 2026</span>
+          </div>
+          <div class="uni-card">
+            <span class="uni-icon">🏙️</span>
+            <div>
+              <div class="uni-name">Cornell Tech — Break Through Tech AI</div>
+              <div class="uni-sub">
+                Selective AI/ML Fellowship · New York City
+              </div>
+            </div>
+            <span class="uni-badge cyan">Aug 2025 – May 2026</span>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <p class="certs-label">Certifications</p>
+        <div class="certs-list">
+          <div class="cert">
+            <div class="cert-inner">
+              <span class="cert-icon">☁️</span>
+              <div>
+                <div class="cert-name">Microsoft Azure Fundamentals</div>
+                <div class="cert-by">Microsoft · AZ-900</div>
+              </div>
+            </div>
+          </div>
+          <div class="cert">
+            <div class="cert-inner">
+              <span class="cert-icon">🤖</span>
+              <div>
+                <div class="cert-name">AWS AI Cloud Practitioner</div>
+                <div class="cert-by">Amazon Web Services</div>
+              </div>
+            </div>
+          </div>
+          <div class="cert">
+            <div class="cert-inner">
+              <span class="cert-icon">☁️</span>
+              <div>
+                <div class="cert-name">AWS Cloud Practitioner</div>
+                <div class="cert-by">Amazon Web Services · CLF-C02</div>
+              </div>
+            </div>
+          </div>
+          <div class="cert">
+            <div class="cert-inner">
+              <span class="cert-icon">☁️</span>
+              <div>
+                <div class="cert-name">
+                  <a
+                    href="https://learn.microsoft.com/en-us/users/nishushrestha-3720/credentials/f23fc569a2bfca17?ref=https%3A%2F%2Fwww.linkedin.com%2F"
+                    >Microsoft 365 Certified: Fundamentals</a
+                  >
+                </div>
+                <div class="cert-by">Microsoft · MS-100</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill canvas — full width below -->
+      <div class="about-canvas-row">
+        <canvas
+          id="skill-canvas"
+          aria-label="Interactive skill constellation"
+          role="img"
+        ></canvas>
+      </div>
+    </section>
+
+    <!-- ════════════ EXPERIENCE ════════════ -->
+    <section id="experience" class="sec-pad" aria-labelledby="exp-h">
+      <div class="wrap">
+        <span class="eyebrow">02 · Experience</span>
+        <h2 class="sec-title reveal" id="exp-h">Where I've <em>Built</em></h2>
+      </div>
+
+      <div class="wrap">
+        <div class="timeline-wrap reveal">
+          <div class="tl-glow-dot" aria-hidden="true"></div>
+
+          <!-- Girls Who Code -->
+          <article class="tl-card" aria-expanded="true">
+            <div class="tl-head">
+              <div>
+                <div class="tl-role">Founder &amp; President</div>
+                <div class="tl-org">Girls Who Code — ULM Chapter</div>
+                <div class="tl-tags">
+                  <span class="tl-tag">50+ Members</span>
+                  <span class="tl-tag g">Chapter Founder</span>
+                  <span class="tl-tag">70% Engagement Boost</span>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-end;
+                  gap: 8px;
+                  flex-shrink: 0;
+                "
+              >
+                <div class="tl-date">2023 – Present</div>
+                <div class="tl-chevron" aria-hidden="true">▾</div>
+              </div>
+            </div>
+            <div class="tl-body" aria-hidden="false">
+              <ul>
+                <li>
+                  Founded ULM's Girls Who Code chapter from scratch — grew to
+                  50+ active members in under a year
+                </li>
+                <li>
+                  Designed and led 10+ technical workshops covering Python, web
+                  dev, Git, and data science fundamentals
+                </li>
+                <li>
+                  Drove a 70% increase in member engagement through structured
+                  mentorship and peer support programs
+                </li>
+                <li>
+                  Organized industry networking events connecting students
+                  directly with regional tech professionals
+                </li>
+                <li>
+                  Partnered with the CS department to create scholarship
+                  guidance and academic resource pipelines
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- IBM Grant -->
+          <article class="tl-card" aria-expanded="true">
+            <div class="tl-head">
+              <div>
+                <div class="tl-role">Software Developer</div>
+                <div class="tl-org">
+                  IBM Grant Project — University of Louisiana Monroe
+                </div>
+                <div class="tl-tags">
+                  <span class="tl-tag">Full Stack</span>
+                  <span class="tl-tag c">IBM Funded</span>
+                  <span class="tl-tag">Python · React</span>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-end;
+                  gap: 8px;
+                  flex-shrink: 0;
+                "
+              >
+                <div class="tl-date">2024</div>
+                <div class="tl-chevron" aria-hidden="true">▾</div>
+              </div>
+            </div>
+            <div class="tl-body" aria-hidden="false">
+              <ul>
+                <li>
+                  Developed full-stack software features as part of an
+                  IBM-funded research grant at ULM
+                </li>
+                <li>
+                  Built and iterated on web application components using React,
+                  Python, and RESTful APIs
+                </li>
+                <li>
+                  Collaborated cross-functionally with faculty researchers to
+                  define and implement technical requirements
+                </li>
+                <li>
+                  Contributed to the research publication workflow with
+                  architecture documentation and testing
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- IT Support -->
+          <article class="tl-card" aria-expanded="true">
+            <div class="tl-head">
+              <div>
+                <div class="tl-role">IT Support Technician</div>
+                <div class="tl-org">University of Louisiana Monroe</div>
+                <div class="tl-tags">
+                  <span class="tl-tag">30+ Tickets/Week</span>
+                  <span class="tl-tag c">Hardware + Software</span>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-end;
+                  gap: 8px;
+                  flex-shrink: 0;
+                "
+              >
+                <div class="tl-date">2023 – 2024</div>
+                <div class="tl-chevron" aria-hidden="true">▾</div>
+              </div>
+            </div>
+            <div class="tl-body" aria-hidden="false">
+              <ul>
+                <li>
+                  Resolved 30+ technical support tickets per week for students,
+                  faculty, and administrative staff
+                </li>
+                <li>
+                  Diagnosed and repaired hardware and software issues across
+                  Windows, macOS, and Linux environments
+                </li>
+                <li>
+                  Configured and maintained network equipment, printers, and
+                  computer lab workstations
+                </li>
+                <li>
+                  Wrote internal documentation reducing average issue resolution
+                  time by approximately 40%
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- Greenqube -->
+          <article class="tl-card" aria-expanded="true">
+            <div class="tl-head">
+              <div>
+                <div class="tl-role">IT Intern</div>
+                <div class="tl-org">Greenqube</div>
+                <div class="tl-tags">
+                  <span class="tl-tag">Infrastructure</span>
+                  <span class="tl-tag c">Client-Facing</span>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-end;
+                  gap: 8px;
+                  flex-shrink: 0;
+                "
+              >
+                <div class="tl-date">2023</div>
+                <div class="tl-chevron" aria-hidden="true">▾</div>
+              </div>
+            </div>
+            <div class="tl-body" aria-hidden="false">
+              <ul>
+                <li>
+                  Supported IT infrastructure management and client-facing
+                  technical operations
+                </li>
+                <li>
+                  Assisted with system deployments, network configuration, and
+                  endpoint device management
+                </li>
+                <li>
+                  Communicated technical solutions clearly to non-technical
+                  stakeholders and end users
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ PROJECTS ════════════ -->
+    <section id="projects" class="sec-pad" aria-labelledby="proj-h">
+      <span class="eyebrow">03 · Projects</span>
+      <h2 class="sec-title reveal" id="proj-h">Things I've <em>Built</em></h2>
+
+      <div class="proj-grid">
+        <!-- CodeQ FEATURED -->
+        <article class="proj hero-proj reveal">
+          <div class="proj-glow" aria-hidden="true"></div>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              flex-wrap: wrap;
+            "
+          >
+            <span class="proj-num">01</span>
+            <span class="featured-tag">✦ Featured</span>
+          </div>
+          <h3 class="proj-title">CodeQ</h3>
+          <p class="proj-desc">
+            Quality-driven automated grading system evaluating programming
+            assignments with instructor-defined tests, rubric-based scoring, and
+            prototype-level academic integrity detection. Supports role-based
+            workflows for Students, Faculty, and Admins with full Docker-based
+            local development.
+          </p>
+          <div class="proj-features">
+            <div class="proj-feat-item">
+              Role-based access control (Student / Faculty / Admin)
+            </div>
+            <div class="proj-feat-item">
+              Automated grading with rubrics, public &amp; private tests
+            </div>
+            <div class="proj-feat-item">
+              Plagiarism similarity detection across submissions
+            </div>
+            <div class="proj-feat-item">
+              AI-generated code likelihood detection via PyTorch
+            </div>
+            <div class="proj-feat-item">
+              Grade export (CSV) · JWT Auth · Docker Compose dev
+            </div>
+          </div>
+          <div class="stack">
+            <span class="chip">Python</span><span class="chip">FastAPI</span
+            ><span class="chip">React</span> <span class="chip">Next.js</span
+            ><span class="chip">TypeScript</span
+            ><span class="chip">PostgreSQL</span>
+            <span class="chip">Docker</span><span class="chip">PyTorch</span
+            ><span class="chip">JWT</span> <span class="chip">Tailwind CSS</span
+            ><span class="chip">Framer Motion</span>
+          </div>
+          <div class="proj-links">
+            <a
+              href="https://github.com/nishu8343"
+              target="_blank"
+              rel="noopener"
+              class="proj-link"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+              View Source
+            </a>
+          </div>
+        </article>
+
+        <!-- Athlyze -->
+        <article class="proj reveal d1">
+          <span class="proj-num">02</span>
+          <h3 class="proj-title">Athlyze</h3>
+          <p class="proj-desc">
+            AI-powered platform giving every athlete a personal coach, guide,
+            and community — combining AI-driven training recommendations with
+            peer support networks.
+          </p>
+          <div class="stack">
+            <span class="chip">TypeScript</span><span class="chip">AI/ML</span
+            ><span class="chip">React</span>
+          </div>
+          <div class="proj-links">
+            <a
+              href="https://github.com/Nishu8343/Athlyze"
+              target="_blank"
+              rel="noopener"
+              class="proj-link"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- IP Explorer -->
+        <article class="proj reveal d1">
+          <span class="proj-num">03</span>
+          <h3 class="proj-title">IP Explorer Visual Novel</h3>
+          <p class="proj-desc">
+            Interactive visual novel teaching internet protocols through
+            immersive storytelling — players explore how packets travel networks
+            through engaging narrative-driven gameplay.
+          </p>
+          <div class="stack">
+            <span class="chip">JavaScript</span
+            ><span class="chip">HTML / CSS</span
+            ><span class="chip">Game Design</span>
+          </div>
+        </article>
+
+        <!-- Email Encryption -->
+        <article class="proj w2 reveal d2">
+          <span class="proj-num">04</span>
+          <h3 class="proj-title">Outlook Email Encryption</h3>
+          <p class="proj-desc">
+            Security-focused Outlook add-in for encrypting outbound emails using
+            symmetric and asymmetric encryption protocols. Ensures end-to-end
+            privacy for sensitive communications with a seamless UX layer
+            integrated directly into the Outlook ecosystem.
+          </p>
+          <div class="stack">
+            <span class="chip">Python</span
+            ><span class="chip">Cryptography</span
+            ><span class="chip">MS Office API</span
+            ><span class="chip">JavaScript</span>
+          </div>
+        </article>
+
+        <!-- Gender ML -->
+        <article class="proj reveal d2">
+          <span class="proj-num">05</span>
+          <h3 class="proj-title">Income Prediction Neural Net</h3>
+          <p class="proj-desc">
+            Neural network investigating gender-based income disparity —
+            predicting whether individuals earn above $50K using the UCI Adult
+            dataset with PyTorch.
+          </p>
+          <div class="stack">
+            <span class="chip">Python</span><span class="chip">PyTorch</span
+            ><span class="chip">Jupyter</span><span class="chip">Pandas</span>
+          </div>
+          <div class="proj-links">
+            <a
+              href="https://github.com/Nishu8343/Gender-Based-Income-Predicting-Netural-Networks"
+              target="_blank"
+              rel="noopener"
+              class="proj-link"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Hailstone -->
+        <article class="proj reveal d3">
+          <span class="proj-num">06</span>
+          <h3 class="proj-title">Hailstone Sequence</h3>
+          <p class="proj-desc">
+            Computational investigation of the Collatz conjecture —
+            implementing, visualizing, and analyzing hailstone sequence patterns
+            and algorithmic behavior in Python.
+          </p>
+          <div class="stack">
+            <span class="chip">Python</span><span class="chip">Algorithms</span
+            ><span class="chip">Matplotlib</span>
+          </div>
+          <div class="proj-links">
+            <a
+              href="https://github.com/Nishu8343/Computational-investigation-of-a-hailstone-sequence"
+              target="_blank"
+              rel="noopener"
+              class="proj-link"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+                />
+              </svg>
+              GitHub
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ════════════ SKILLS ════════════ -->
+    <section
+      id="skills"
+      aria-labelledby="skills-h"
+      style="padding: var(--gap) 0"
+    >
+      <div class="head-wrap">
+        <span class="eyebrow">04 · Skills</span>
+        <h2 class="sec-title reveal" id="skills-h">My <em>Toolkit</em></h2>
+      </div>
+
+      <div class="skills-tiers">
+        <p class="tier-label">Languages</p>
+        <div class="ticker-row">
+          <div class="ticker-inner">
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Python</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>JavaScript</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>TypeScript</span
+            >
+            <span class="skill-badge"><span class="badge-dot"></span>Java</span>
+            <span class="skill-badge"><span class="badge-dot"></span>SQL</span>
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>HTML / CSS</span
+            >
+            <span class="skill-badge"><span class="badge-dot"></span>Bash</span>
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Python</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>JavaScript</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>TypeScript</span
+            >
+            <span class="skill-badge"><span class="badge-dot"></span>Java</span>
+            <span class="skill-badge"><span class="badge-dot"></span>SQL</span>
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>HTML / CSS</span
+            >
+            <span class="skill-badge"><span class="badge-dot"></span>Bash</span>
+          </div>
+        </div>
+
+        <p class="tier-label" style="margin-top: 16px">
+          Frameworks &amp; Libraries
+        </p>
+        <div class="ticker-row">
+          <div class="ticker-inner rev slow">
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>React</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>Next.js</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>FastAPI</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>Django</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>Node.js</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>React Native</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>PyTorch</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>Tailwind CSS</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>Bootstrap</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>Material UI</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>Framer Motion</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>React</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>Next.js</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>FastAPI</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>Django</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>Node.js</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>React Native</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>PyTorch</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>Tailwind CSS</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>Bootstrap</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>Material UI</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot c"></span>Framer Motion</span
+            >
+          </div>
+        </div>
+
+        <p class="tier-label" style="margin-top: 16px">Tools &amp; Platforms</p>
+        <div class="ticker-row">
+          <div class="ticker-inner">
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Git / GitHub</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Docker</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>PostgreSQL</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>MySQL</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Microsoft Azure</span
+            >
+            <span class="skill-badge"><span class="badge-dot"></span>AWS</span>
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Figma</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Postman</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Jupyter</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Linux</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Git / GitHub</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Docker</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>PostgreSQL</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>MySQL</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Microsoft Azure</span
+            >
+            <span class="skill-badge"><span class="badge-dot"></span>AWS</span>
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Figma</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Postman</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Jupyter</span
+            >
+            <span class="skill-badge"
+              ><span class="badge-dot"></span>Linux</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ AWARDS ════════════ -->
+    <section id="awards" class="sec-pad" aria-labelledby="awards-h">
+      <div class="blob blob-purple blob-1" aria-hidden="true"></div>
+
+      <span class="eyebrow">05 · Recognition</span>
+      <h2 class="sec-title reveal" id="awards-h">
+        Awards &amp; <em>Honors</em>
+      </h2>
+
+      <div class="awards-grid">
+        <!-- Junior of the Year -->
+        <article class="award-card wide reveal">
+          <div class="award-icon">🏅</div>
+          <div class="award-name">ULM Honors Junior of the Year</div>
+          <div class="award-org">
+            ULM Honors Program · University of Louisiana Monroe
+          </div>
+          <div class="award-desc">
+            Recognized as the Junior of the Year for the ULM Honors Program for
+            outstanding involvement and achievement in the program.
+          </div>
+          <div class="award-year">May 2025</div>
+        </article>
+
+        <!-- Best Poster -->
+        <article class="award-card reveal d1">
+          <div class="award-icon">🔬</div>
+          <div class="award-name">Best Undergraduate Poster Presentation</div>
+          <div class="award-org">
+            Louisiana Academy of Science (LAS) 99 · LSU Alexandria
+          </div>
+          <div class="award-desc">
+            Won Best Undergraduate Poster Presentation in the Computer Science /
+            Cybersecurity &amp; Information Assurance / Mathematics &amp;
+            Statistics category.
+          </div>
+          <div class="award-year">Mar 2025</div>
+        </article>
+
+        <!-- Advertising Bronze -->
+        <article class="award-card reveal d1">
+          <div class="award-icon">🥉</div>
+          <div class="award-name">
+            Student Advertising Award — Creative Design, Bronze
+          </div>
+          <div class="award-org">
+            ULM Marketing · University of Louisiana Monroe
+          </div>
+          <div class="award-desc">
+            Recognized for exceptional creativity and visually appealing design
+            work in the Creative Design category.
+          </div>
+          <div class="award-year">May 2025</div>
+        </article>
+
+        <!-- Entrepreneurship Winner -->
+        <article class="award-card reveal d2">
+          <div class="award-icon">🏆</div>
+          <div class="award-name">
+            Stukent Entrepreneurship Pitch Competition — 1st Place
+          </div>
+          <div class="award-org">Stukent</div>
+          <div class="award-desc">
+            Presented a business idea and placed first in the Stukent
+            Entrepreneurship Pitch Competition.
+          </div>
+          <div class="award-year">Feb 2025</div>
+        </article>
+
+        <!-- Advertising Gold -->
+        <article class="award-card reveal d2">
+          <div class="award-icon">🥇</div>
+          <div class="award-name">
+            Student Advertising Award — Creative Design, Gold
+          </div>
+          <div class="award-org">
+            ULM Marketing · University of Louisiana Monroe
+          </div>
+          <div class="award-desc">
+            Recognized for exceptional creativity and visually appealing design
+            work in the Creative Design category.
+          </div>
+          <div class="award-year">May 2024</div>
+        </article>
+
+        <!-- Sophomore of the Year -->
+        <article class="award-card reveal d3">
+          <div class="award-icon">⭐</div>
+          <div class="award-name">ULM Honors Sophomore of the Year</div>
+          <div class="award-org">
+            ULM Honors Program · University of Louisiana Monroe
+          </div>
+          <div class="award-desc">
+            Recognized as the Sophomore of the Year for the ULM Honors Program
+            for outstanding involvement and achievement in the program.
+          </div>
+          <div class="award-year">Apr 2024</div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ════════════ LEADERSHIP ════════════ -->
+    <section id="leadership" class="sec-pad" aria-labelledby="lead-h">
+      <span class="eyebrow">06 · Leadership</span>
+      <h2 class="sec-title reveal" id="lead-h">How I <em>Lead</em></h2>
+
+      <div class="lead-grid">
+        <div class="lead-card reveal">
+          <div class="lead-icon">🌸</div>
+          <div class="lead-role">Founder &amp; President</div>
+          <div class="lead-org">Girls Who Code — ULM</div>
+          <div class="lead-date">2023 – Present</div>
+          <div class="lead-stat">
+            Built ULM's GWC chapter from the ground up — 50+ members, 10+
+            workshops, 70% engagement growth
+          </div>
+        </div>
+
+        <div class="lead-card reveal d1">
+          <div class="lead-icon">💰</div>
+          <div class="lead-role">Acting Treasurer</div>
+          <div class="lead-org">Nepalese Student Association — ULM</div>
+          <div class="lead-date">2023 – Present</div>
+          <div class="lead-stat">
+            Managing chapter finances, budgeting for cultural events, and
+            driving community engagement among Nepalese and South Asian students
+            at ULM
+          </div>
+        </div>
+
+        <div class="lead-card reveal d2">
+          <div class="lead-icon">🎨</div>
+          <div class="lead-role">Graphic Designer</div>
+          <div class="lead-org">Google Developer Student Club — ULM</div>
+          <div class="lead-date">2022 – 2023</div>
+          <div class="lead-stat">
+            Designed all event marketing, digital branding, and visual content
+            for GDSC ULM — boosting event attendance and chapter visibility
+          </div>
+        </div>
+
+        <div class="lead-card reveal d3">
+          <div class="lead-icon">🧭</div>
+          <div class="lead-role">Peer Leader</div>
+          <div class="lead-org">ULM Academic Affairs</div>
+          <div class="lead-date">2023 – 2024</div>
+          <div class="lead-stat">
+            Mentored incoming CS students through academic orientation, study
+            skills sessions, and career development workshops
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════ CONTACT ════════════ -->
+    <section id="contact" class="sec-pad" aria-labelledby="contact-h">
+      <div class="blob blob-purple blob-1" aria-hidden="true"></div>
+
+      <span
+        class="eyebrow"
+        style="display: block; text-align: center; justify-content: center"
+        >07 · Contact</span
+      >
+      <h2 class="contact-heading reveal" id="contact-h">Let's Connect</h2>
+      <p class="contact-sub reveal d1">
+        Open to internships, full-time roles, and collaborations. Let's build
+        something meaningful together.
+      </p>
+
+      <button
+        class="email-btn reveal d2"
+        onclick="copyEmail()"
+        aria-label="Copy email cresthaneeshu@gmail.com to clipboard"
+      >
+        <svg
+          width="20"
+          height="20"
+          fill="none"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <path
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+          />
+        </svg>
+        cresthaneeshu@gmail.com
+        <svg
+          width="15"
+          height="15"
+          fill="none"
+          viewBox="0 0 24 24"
+          style="opacity: 0.45"
+          aria-hidden="true"
+        >
+          <path
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10"
+          />
+        </svg>
+      </button>
+
+      <div class="contact-meta reveal d2">
+        <span>📍 Monroe, LA</span><span class="sep">·</span>
+        <span>📞 318-372-1547</span><span class="sep">·</span>
+        <span>🎓 ULM · May 2026</span>
+      </div>
+
+      <div class="socials reveal d3">
+        <a
+          href="https://linkedin.com/in/nishushrestha"
+          target="_blank"
+          rel="noopener"
+          class="social-ico"
+          aria-label="LinkedIn"
+        >
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+            />
+          </svg>
+        </a>
+        <a
+          href="https://github.com/nishu8343"
+          target="_blank"
+          rel="noopener"
+          class="social-ico"
+          aria-label="GitHub"
+        >
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+            />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        Crafted with intention by <em>Nishu Shrestha</em> · Monroe, LA · 2026
+      </p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
