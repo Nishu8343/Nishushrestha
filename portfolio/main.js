@@ -6,8 +6,8 @@
   'use strict';
 
   /* ─── Custom Cursor ─────────────────────────────────────── */
-  const curEl  = document.getElementById('cursor');
-  const dotEl  = document.getElementById('cursor-dot');
+  const curEl = document.getElementById('cursor');
+  const dotEl = document.getElementById('cursor-dot');
   let mx = -200, my = -200;
   let dx = -200, dy = -200;
 
@@ -43,7 +43,7 @@
     let pmx = -9999, pmy = -9999;
 
     function resizeCanvas() {
-      W = canvas.width  = window.innerWidth;
+      W = canvas.width = window.innerWidth;
       H = canvas.height = window.innerHeight;
     }
     resizeCanvas();
@@ -52,12 +52,12 @@
 
     const COUNT = Math.min(65, Math.floor(window.innerWidth * 0.045));
     const pts = Array.from({ length: COUNT }, () => ({
-      x:  Math.random() * window.innerWidth,
-      y:  Math.random() * window.innerHeight,
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
       vx: (Math.random() - .5) * .38,
       vy: (Math.random() - .5) * .38,
-      r:  Math.random() * 1.4 + .4,
-      c:  Math.random() > .5 ? '139,92,246' : '6,182,212',
+      r: Math.random() * 1.4 + .4,
+      c: Math.random() > .5 ? '139,92,246' : '6,182,212',
     }));
 
     (function drawFrame() {
@@ -65,7 +65,7 @@
 
       pts.forEach(p => {
         const ddx = p.x - pmx, ddy = p.y - pmy;
-        const dd  = Math.sqrt(ddx * ddx + ddy * ddy);
+        const dd = Math.sqrt(ddx * ddx + ddy * ddy);
         if (dd < 130) {
           const f = ((130 - dd) / 130) * .75;
           p.vx += (ddx / dd) * f * .06;
@@ -102,7 +102,7 @@
 
   /* ─── Typewriter ────────────────────────────────────────── */
   const roles = ['Developer', 'Founder', 'AI Enthusiast', 'Problem Solver', 'Full-Stack Engineer'];
-  const twEl  = document.getElementById('tw');
+  const twEl = document.getElementById('tw');
   if (twEl) {
     let ri = 0, ci = 0, del = false;
     function tick() {
@@ -167,32 +167,32 @@
     let scW, scH, hovered = -1, t = 0;
 
     const NODES = [
-      { n: 'Python',      x: .50, y: .48, c: '#8B5CF6', r: 27 },
-      { n: 'React',       x: .21, y: .22, c: '#06B6D4', r: 21 },
-      { n: 'TypeScript',  x: .78, y: .22, c: '#06B6D4', r: 21 },
-      { n: 'FastAPI',     x: .76, y: .55, c: '#8B5CF6', r: 19 },
-      { n: 'Next.js',     x: .24, y: .60, c: '#8B5CF6', r: 19 },
-      { n: 'Docker',      x: .50, y: .84, c: '#22D3EE', r: 17 },
-      { n: 'PyTorch',     x: .16, y: .78, c: '#A78BFA', r: 17 },
-      { n: 'Azure',       x: .84, y: .78, c: '#22D3EE', r: 17 },
-      { n: 'PostgreSQL',  x: .84, y: .42, c: '#8B5CF6', r: 15 },
-      { n: 'Java',        x: .16, y: .40, c: '#A78BFA', r: 15 },
-      { n: 'Node.js',     x: .50, y: .14, c: '#10B981', r: 17 },
-      { n: 'Figma',       x: .62, y: .82, c: '#F472B6', r: 14 },
-      { n: 'Git',         x: .38, y: .82, c: '#FB923C', r: 14 },
+      { n: 'Python', x: .50, y: .48, c: '#8B5CF6', r: 27 },
+      { n: 'React', x: .21, y: .22, c: '#06B6D4', r: 21 },
+      { n: 'TypeScript', x: .78, y: .22, c: '#06B6D4', r: 21 },
+      { n: 'FastAPI', x: .76, y: .55, c: '#8B5CF6', r: 19 },
+      { n: 'Next.js', x: .24, y: .60, c: '#8B5CF6', r: 19 },
+      { n: 'Docker', x: .50, y: .84, c: '#22D3EE', r: 17 },
+      { n: 'PyTorch', x: .16, y: .78, c: '#A78BFA', r: 17 },
+      { n: 'Azure', x: .84, y: .78, c: '#22D3EE', r: 17 },
+      { n: 'PostgreSQL', x: .84, y: .42, c: '#8B5CF6', r: 15 },
+      { n: 'Java', x: .16, y: .40, c: '#A78BFA', r: 15 },
+      { n: 'Node.js', x: .50, y: .14, c: '#10B981', r: 17 },
+      { n: 'Figma', x: .62, y: .82, c: '#F472B6', r: 14 },
+      { n: 'Git', x: .38, y: .82, c: '#FB923C', r: 14 },
     ];
     const EDGES = [
-      [0,1],[0,2],[0,3],[0,4],[0,5],[0,10],
-      [1,4],[1,6],[2,3],[2,8],[3,8],[4,9],
-      [5,6],[5,7],[5,12],[6,9],[7,8],
-      [10,1],[10,2],[11,3],[12,5],
+      [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [0, 10],
+      [1, 4], [1, 6], [2, 3], [2, 8], [3, 8], [4, 9],
+      [5, 6], [5, 7], [5, 12], [6, 9], [7, 8],
+      [10, 1], [10, 2], [11, 3], [12, 5],
     ];
     const pos = [];
 
     const dpr = window.devicePixelRatio || 1;
     function resizeSC() {
       const r = sc.getBoundingClientRect();
-      sc.width  = r.width  * dpr;
+      sc.width = r.width * dpr;
       sc.height = r.height * dpr;
       scW = r.width; scH = r.height;
     }
@@ -250,7 +250,7 @@
 
         // circle fill
         sctx.beginPath(); sctx.arc(p.x, p.y, r, 0, Math.PI * 2);
-        sctx.fillStyle   = nd.c + (isH ? '28' : '18');
+        sctx.fillStyle = nd.c + (isH ? '28' : '18');
         sctx.strokeStyle = nd.c + (isH ? 'ee' : '66');
         sctx.lineWidth = isH ? 2 : 1.5;
         sctx.fill(); sctx.stroke();
